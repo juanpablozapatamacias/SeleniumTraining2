@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="training.selenium.test.DemoTest">
+        <methods>
+          <include name="checkboxTest"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="SortableDataTableTest"/>
+          <include name="basicAuthenticationTest"/>
+          <include name="contextMenuTest"/>
+          <include name="dropdownListTest"/>
+          <include name="multipleWindowsTest"/>
+          <include name="dynamicControlTest"/>
+          <include name="fileUploadTest"/>
+        </methods>
+      </class> <!-- training.selenium.test.DemoTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

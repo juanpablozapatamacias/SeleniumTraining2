@@ -14,6 +14,7 @@
           <include name="dropdownListTest"/>
           <include name="multipleWindowsTest"/>
           <include name="dynamicControlTest"/>
+          <include name="framesTest"/>
           <include name="fileUploadTest"/>
         </methods>
       </class> <!-- training.selenium.test.DemoTest -->

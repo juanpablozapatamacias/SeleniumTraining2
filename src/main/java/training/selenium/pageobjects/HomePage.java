@@ -59,4 +59,12 @@ public class HomePage extends BasePage {
 		ele.click();
 		return new SortableDataTablesPage(driver);
 	}
+
+	public FramesPage clickFramesLink() {
+		// TODO Auto-generated method stub
+		ele = getElement(By.xpath("//a[contains(text(),'Frames')]"),3);
+		ele.click();
+		return new FramesPage(driver);
+	}
+	
 }

@@ -136,7 +136,7 @@ public class BasePage {
 					op.setCapability(CapabilityType.PROXY, proxy);
 					
 					System.setProperty("webdriver.chrome.driver", 
-							projectPath + "\\drivers\\chromedriver\\chromedriver.exe");
+							projectPath + "\\drivers\\chromedriver\\chromedriver-77.exe");
 					
 					driver = new ChromeDriver(op);	
 				}
@@ -224,14 +224,15 @@ public class BasePage {
 				if(propBrowser.trim().contentEquals("chrome")) {
 					ChromeOptions op = new ChromeOptions();
 					
+					/*
 					Proxy proxy = new Proxy();
 					proxy.setHttpProxy(http_proxy);
 					proxy.setSslProxy(https_proxy);
 					
 					op.setCapability(CapabilityType.PROXY, proxy);
-					
+					*/
 					System.setProperty("webdriver.chrome.driver", 
-							projectPath + "/drivers/chromedriver/chromedriver");
+							projectPath + "/drivers/chromedriver/chromedriver-77");
 					
 					driver = new ChromeDriver(op);	
 				}

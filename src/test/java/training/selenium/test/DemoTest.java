@@ -18,7 +18,9 @@ import training.selenium.pageobjects.ContextMenuPage;
 import training.selenium.pageobjects.DropdownListPage;
 import training.selenium.pageobjects.DynamicControlsPage;
 import training.selenium.pageobjects.FileUploadPage;
+import training.selenium.pageobjects.FramesPage;
 import training.selenium.pageobjects.HomePage;
+import training.selenium.pageobjects.IframePage;
 import training.selenium.pageobjects.MultipleWindowsPage;
 import training.selenium.pageobjects.SortableDataTablesPage;
 
@@ -97,10 +99,23 @@ public class DemoTest extends BasePage{
 	
 	@Test(dependsOnMethods = "SortableDataTableTest")
 	public void multipleWindowsTest() {
-		MultipleWindowsPage multipleWinPage = homePage.clickMultipleWindowsLink();
-		multipleWinPage.clickToOpenAnotherWinTab();
+		//MultipleWindowsPage multipleWinPage = homePage.clickMultipleWindowsLink();
+		//multipleWinPage.clickToOpenAnotherWinTab();
 		//Assert.assertTrue(multipleWinPage.getNewWindowMessageTab().toLowerCase().contains("new"));
-		homePage = multipleWinPage.getHomePage();
+		//homePage = multipleWinPage.getHomePage();
+	}
+	
+	@Test(dependsOnMethods = "multipleWindowsTest")
+	public void framesTest() {
+		FramesPage framesPage = homePage.clickFramesLink();
+		IframePage iframePage = framesPage.clickIframeLink();
+		iframePage.switchToIFrame();
+		iframePage.setTextIframe("This text is from automation script");
+		
+		iframePage.navigateBack();
+		
+		homePage = framesPage.getHomePage();
+		
 	}
 	
 	@AfterClass
